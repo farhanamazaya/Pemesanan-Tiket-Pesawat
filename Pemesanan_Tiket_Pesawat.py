@@ -61,3 +61,71 @@ def yia_dps():
     print("-" * 70)
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+def dps_cgk():
+    import csv
+    flights = []
+    with open('dpscgk.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        
+def dps_upg():
+    import csv
+    flights = []
+    with open('dpsupg.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        
+def dps_sub():
+    import csv
+    flights = []
+    with open('dpssub.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")        
+
+def dps_yia():
+    import csv
+    flights = []
+    with open('dpsyia.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+
+def pesan():
+    import math
+    print("Frequently Added to Booking")
+    asuransi_perjalanan = input("◽ Travel Insurance Rp 37.000/pax? (yes/no) : ")
+    juml_tiket = penumpang_data
+    print("")
+    
+    if asuransi_perjalanan == "yes":
+        asuransi = 37000
+    elif asuransi_perjalanan == "no":
+        asuransi = 0
+    else:
+        print ("Please try again")
+        
+    total_harga = juml_tiket * (harga + asuransi)
+    print("Price You Pay Rp", total_harga)
+    print("Price Details")
+    print("◾ Total Original Price Rp ", math.ceil (juml_tiket * harga))
+    print("◾ Insurance Rp ", math .ceil (juml_tiket * asuransi)) 
+              
