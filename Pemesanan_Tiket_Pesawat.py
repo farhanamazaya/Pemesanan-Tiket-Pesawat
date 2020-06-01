@@ -108,6 +108,54 @@ def dps_yia():
     print("-" * 70)
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+              
+def upg_cgk():
+    import csv
+    flights = []
+    with open('upgcgk.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+              
+def upg_sub():
+    import csv
+    flights = []
+    with open('upgsub.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+              
+def upg_yia():
+    import csv
+    flights = []
+    with open('upgyia.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+              
+def upg_dps():
+    import csv
+    flights = []
+    with open('upgdps.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
 def pesan():
     import math
@@ -127,5 +175,13 @@ def pesan():
     print("Price You Pay Rp", total_harga)
     print("Price Details")
     print("◾ Total Original Price Rp ", math.ceil (juml_tiket * harga))
-    print("◾ Insurance Rp ", math .ceil (juml_tiket * asuransi)) 
+    print("◾ Insurance Rp ", math .ceil (juml_tiket * asuransi))
+       
+ def data_pemesan():
+    print("Contact Details (for E-ticket/Voucher)")
+    input("◾ Full Name : ")
+    input("◾ Mobile Number : ")
+    input("◾ Email : ")
+    print("""We will send your booking confirmations to the above contact details, 
+which will also be used for refund or reschedule purposes.""")
               
