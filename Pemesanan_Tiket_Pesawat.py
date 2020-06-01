@@ -156,6 +156,54 @@ def upg_dps():
     print("-" * 70)
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+              
+def jakarta_surabaya():
+    import csv
+    flights = []
+    with open('jakarta_surabaya.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
+        
+def jakarta_makassar():
+    import csv
+    flights = []
+    with open('jakarta_makassar.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
+
+def jakarta_denpasar():
+    import csv
+    flights = []
+    with open('jakarta_denpasar.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
+        
+def jakarta_yogyakarta():
+    import csv
+    flights = []
+    with open('jakarta_yogyakarta.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
 
 def pesan():
     import math
@@ -177,11 +225,40 @@ def pesan():
     print("◾ Total Original Price Rp ", math.ceil (juml_tiket * harga))
     print("◾ Insurance Rp ", math .ceil (juml_tiket * asuransi))
        
- def data_pemesan():
+def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
     input("◾ Full Name : ")
     input("◾ Mobile Number : ")
     input("◾ Email : ")
     print("""We will send your booking confirmations to the above contact details, 
 which will also be used for refund or reschedule purposes.""")
+              
+def penumpang():
+    penumpang= []
+    penumpang_next = True
+    while penumpang_next:
+        print ("")
+        dtpenumpang={}
+        name                    = input("Name : ")
+        tittle                  = input("Tittle : ")
+        dtpenumpang['Name'] = name
+        dtpenumpang['Tittle'] = tittle
+        print ("Passengers Data:", dtpenumpang)
+        penumpang.append(dtpenumpang)
+        print("Total Passengers:", penumpang)
+        
+        data = input("Data of Passengers are Complete? (yes/no)")
+        if data != "yes":
+            penumpang_next = False
+            
+    cIn = 0
+    while cIn < len(penumpang):
+        dt = penumpang[cIn]
+        cIn += 1
+        print()
+        print(f"Data penumpang ke-{cIn} :")
+        print("NAME :", dt['Name'])
+        print("TITTLE :", dt['Tittle'])
+              
+
               
