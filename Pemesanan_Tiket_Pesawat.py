@@ -325,5 +325,79 @@ while ulang == True:
     penumpang_data = int(input("Passengers : "))
     print("")
               
+    elif dari == "Surabaya" and ke == "Jakarta":
+        Surabaya_Jakarta()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 5:
+            harga = 476700
+        elif no_pesawat <= 9:
+            harga = 1054200
+        elif no_pesawat == 10:
+            harga = 1378700
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Surabaya" and ke == "Makassar":
+        Surabaya_Makassar()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 5:
+            harga = 522900
+        elif no_pesawat == 6:
+            harga = 1144400
+        elif no_pesawat == 7:
+            harga = 1008000
+        elif no_pesawat == 8:
+            harga = 1174100
+        elif no_pesawat == 9:
+            harga = 1245600
+        elif no_pesawat == 10:
+            harga = 1732500
+        else:
+            print("Flights are not available")
+    
+    elif dari == "Surabaya" and ke == "Denpasar":
+        Surabaya_Denpasar()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 5:
+            harga = 457400
+        elif no_pesawat == 6:
+            harga = 582300
+        elif no_pesawat == 7:
+            harga = 607600
+        elif no_pesawat <= 9:
+            harga = 832400
+        elif no_pesawat == 10:
+            harga = 1258600
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Surabaya" and ke == "Yogyakarta":
+        Surabaya_Yogyakarta()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 6:
+            harga = 623000
+        elif no_pesawat <= 8:
+            harga = 724200
+        elif no_pesawat == 9:
+            harga = 1056300
+        elif no_pesawat == 10:
+            harga = 1618700
+        else:
+            print("Flights are not available")
+         
+    print("")
+    pesan()
+    print("")
+    data_pemesan()
+    print("")
+    penumpang()
+    
+    inputuser = input("Back to Menu? (yes/no) : ")
+    if inputuser != "yes":
+        ulang = False
+        
+print("")
+print ("Thank You")
+              
 
               
