@@ -204,6 +204,54 @@ def jakarta_yogyakarta():
     print("-" * 70)
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
+              
+def Surabaya_Jakarta():
+    import csv
+    flights = []
+    with open('Surabaya_Jakarta.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        
+def Surabaya_Denpasar():
+    import csv
+    flights = []
+    with open('Surabaya_Denpasar.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        
+def Surabaya_Makassar():
+    import csv
+    flights = []
+    with open('Surabaya_Makassar.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        
+def Surabaya_Yogyakarta():
+    import csv
+    flights = []
+    with open('Surabaya_Yogyakarta.csv') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        for row in csv_reader:
+            flights.append(row)
+    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("-" * 70)
+    for data in flights:
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
 def pesan():
     import math
@@ -259,6 +307,23 @@ def penumpang():
         print(f"Data penumpang ke-{cIn} :")
         print("NAME :", dt['Name'])
         print("TITTLE :", dt['Tittle'])
+              
+ulang = True
+inputuser = ""
+
+while ulang == True:
+    print("\n==================================")
+    print(" TRAVELOKE 🛫 BOOK FLIGHT TICKET ")
+    print("==================================")
+    print("")
+    
+    kota()
+    dari = input("Departure : ")
+    ke = input("Arrival : ")
+    keberangkatan = str(input("Depatures Date (dd/mm/yyyy): "))
+    
+    penumpang_data = int(input("Passengers : "))
+    print("")
               
 
               
