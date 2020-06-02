@@ -328,6 +328,75 @@ while ulang == True:
     
     penumpang_data = int(input("Passengers : "))
     print("")
+    
+    if dari == "Jakarta" and ke == "Surabaya":
+        jakarta_surabaya()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 3:
+            harga = 486700
+        elif no_pesawat <= 6:
+            harga = 1014200
+        elif no_pesawat == 7:
+            harga = 728000
+        elif no_pesawat == 8:
+            harga = 1031800
+        elif no_pesawat == 9:
+            harga = 1071200
+        elif no_pesawat == 10:
+            harga = 1418700
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Jakarta" and ke == "Makassar":
+        jakarta_makassar()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 3:
+            harga = 703400
+        elif no_pesawat <=7:
+            harga = 1600300
+        elif no_pesawat == 8:
+            harga = 1579400
+        elif no_pesawat == 9:
+            harga = 1604700
+        elif no_pesawat == 10:
+            harga = 2148000
+        else:
+            print("Flights are not available")
+    
+    elif dari == "Jakarta" and ke == "Denpasar":
+        jakarta_denpasar()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat == 1:
+            harga = 1193500
+        elif no_pesawat == 2:
+            harga = 1218800
+        elif no_pesawat == 3:
+            harga = 1243900
+        elif no_pesawat == 4:
+            harga = 1269200
+        elif no_pesawat == 5:
+            harga = 1293400
+        elif no_pesawat <= 10:
+            harga = 2148000
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Jakarta" and ke == "Yogyakarta":
+        jakarta_yogyakarta()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 3:
+            harga = 382200
+        elif no_pesawat <=6:
+            harga = 705100
+        elif no_pesawat == 7:
+            harga = 833300
+        elif no_pesawat <= 9:
+            harga = 802800
+        elif no_pesawat == 10:
+            harga = 1067800
+        else:
+            print("Flights are not available")
+              
     elif dari == "Makassar" and ke == "Jakarta":
         makassar_jakarta()
         no_pesawat = int(input("Flight Number : "))
