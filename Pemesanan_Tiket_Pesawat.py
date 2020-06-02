@@ -277,7 +277,10 @@ def pesan():
 def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
     input("◾ Full Name : ")
-    input("◾ Mobile Number : ")
+    try:
+        int(input("◾ Mobile Number : "))
+    except ValueError:
+        print("\nError: You have to input your phone number")
     input("◾ Email : ")
     print("""We will send your booking confirmations to the above contact details, 
 which will also be used for refund or reschedule purposes.""")
