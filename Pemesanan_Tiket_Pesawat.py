@@ -289,7 +289,7 @@ def penumpang():
         print ("")
         dtpenumpang={}
         name                    = input("Name : ")
-        tittle                  = input("Tittle : ")
+        tittle                  = input("Tittle (Mr/Mrs/Ms) : ")
         dtpenumpang['Name'] = name
         dtpenumpang['Tittle'] = tittle
         print ("Passengers Data:", dtpenumpang)
