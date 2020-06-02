@@ -110,10 +110,10 @@ def denpasar_yogyakarta():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
-def upg_cgk():
+def makassar_jakarta():
     import csv
     flights = []
-    with open('upgcgk.csv') as csv_file:
+    with open('makassar_jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -122,10 +122,10 @@ def upg_cgk():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
-def upg_sub():
+def makassar_surabaya():
     import csv
     flights = []
-    with open('upgsub.csv') as csv_file:
+    with open('makassar_surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -134,10 +134,10 @@ def upg_sub():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
-def upg_yia():
+def makassar_yogyakarta():
     import csv
     flights = []
-    with open('upgyia.csv') as csv_file:
+    with open('makassar_yogyakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -146,10 +146,10 @@ def upg_yia():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
-def upg_dps():
+def makassar_denpasar():
     import csv
     flights = []
-    with open('upgdps.csv') as csv_file:
+    with open('makassar_denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -325,6 +325,53 @@ while ulang == True:
     
     penumpang_data = int(input("Passengers : "))
     print("")
+    elif dari == "Makassar" and ke == "Jakarta":
+        makassar_jakarta()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 4:
+            harga = 685900
+        elif no_pesawat <= 8:
+            harga = 942350
+        elif no_pesawat <= 10:
+            harga = 1041500
+        else:
+            print("Flights are not available")
+        
+    elif dari == "Makassar" and ke == "Surabaya":
+        makassar_surabaya()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 5:
+            harga = 620000
+        elif no_pesawat <= 7:
+            harga = 686700
+        elif no_pesawat <= 10:
+            harga = 1035000
+        else:
+            print("Flights are not available")
+    
+    elif dari == "Makassar" and ke == "Yogyakarta":
+        makassar_yogyakarta()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 5:
+            harga = 508000
+        elif no_pesawat <= 8:
+            harga = 628220
+        elif no_pesawat <= 10:
+            harga = 1025000
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Makassar" and ke == "Denpasar":
+        makassar_denpasar()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 3:
+            harga = 1057700
+        elif no_pesawat <= 7:
+            harga = 736500
+        elif no_pesawat <= 10:
+            harga = 905900
+        else:
+            print("Flights are not available")
               
     elif dari == "Surabaya" and ke == "Jakarta":
         Surabaya_Jakarta()
