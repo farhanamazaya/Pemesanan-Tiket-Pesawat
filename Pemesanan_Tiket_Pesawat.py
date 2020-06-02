@@ -278,7 +278,7 @@ def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
     input("◾ Full Name : ")
     try:
-        int(input("◾ Mobile Number : "))
+        float(input("◾ Mobile Number : "))
     except ValueError:
         print("\nError: You have to input your phone number")
     input("◾ Email : ")
@@ -286,7 +286,7 @@ def data_pemesan():
 which will also be used for refund or reschedule purposes.""")
               
 def penumpang():
-    print ("Pasengers Data")
+    print ("Passengers Data")
     penumpang= []
     penumpang_next = True
     while penumpang_next:
