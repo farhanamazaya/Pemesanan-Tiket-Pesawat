@@ -286,6 +286,7 @@ def data_pemesan():
 which will also be used for refund or reschedule purposes.""")
               
 def penumpang():
+    print ("Pasengers Data")
     penumpang= []
     penumpang_next = True
     while penumpang_next:
