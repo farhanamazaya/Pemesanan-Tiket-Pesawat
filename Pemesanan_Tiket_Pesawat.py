@@ -14,10 +14,10 @@ def kota():
     print("▶ Yogyakarta \t ▶ Yogyakarta")
     print("▶ Denpasar \t ▶ Denpasar")
     
-def yia_cgk():
+def Yogyakarta_Jakarta():
     import csv
     flights = []
-    with open('yiacgk.csv') as csv_file:
+    with open('Yogyakarta_Jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -26,10 +26,10 @@ def yia_cgk():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
-def yia_upg():
+def Yogyakarta_Makassar():
     import csv
     flights = []
-    with open('yiaupg.csv') as csv_file:
+    with open('Yogyakarta_Makassar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -38,10 +38,10 @@ def yia_upg():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
-def yia_sub():
+def Yogyakarta_Surabaya():
     import csv
     flights = []
-    with open('yiasub.csv') as csv_file:
+    with open('Yogyakarta_Surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -50,10 +50,10 @@ def yia_sub():
     for data in flights:
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
-def yia_dps():
+def Yogyakarta_Denpasar():
     import csv
     flights = []
-    with open('yiadps.csv') as csv_file:
+    with open('Yogyakarta_Denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
@@ -383,6 +383,80 @@ while ulang == True:
             harga = 1056300
         elif no_pesawat == 10:
             harga = 1618700
+        else:
+            print("Flights are not available")
+              
+    elif dari == "Yogyakarta" and ke == "Jakarta":
+        yia_cgk()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat == 1:
+            harga = 1293100
+        elif no_pesawat <= 3:
+            harga = 332200
+        elif no_pesawat <= 5:
+            harga = 451000
+        elif no_pesawat == 6:
+            harga = 655600
+        elif no_pesawat == 7:
+            harga = 754600
+        elif no_pesawat == 8:
+            harga = 767800
+        elif no_pesawat <= 10:
+            harga = 987800
+        else:
+            print("Flights are not available")
+        
+    elif dari == "Yogyakarta" and ke == "Makassar":
+        yia_upg()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 2:
+            harga = 500500
+        elif no_pesawat <= 4:
+            harga = 935600
+        elif no_pesawat == 5:
+            harga = 1045000
+        elif no_pesawat <= 7:
+            harga = 1248940
+        elif no_pesawat == 8:
+            harga = 1645900
+        elif no_pesawat <= 10:
+            harga =  2269900
+        else:
+            print("Flights are not available")
+    
+    elif dari == "Yogyakarta" and ke == "Surabaya":
+        yia_sub()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 3:
+            harga = 718900
+        elif no_pesawat <= 6:
+            harga = 1723200
+        elif no_pesawat == 7:
+            harga = 2276500
+        elif no_pesawat <= 9:
+            harga = 583000
+        elif no_pesawat == 10:
+            harga = 1217200
+        else:
+            print("Flights are not available")
+            
+    elif dari == "Yogyakarta" and ke == "Denpasar":
+        yia_dps()
+        no_pesawat = int(input("Flight Number : "))
+        if no_pesawat <= 2:
+            harga = 992200
+        elif no_pesawat == 3:
+            harga = 1279300
+        elif no_pesawat == 4:
+            harga = 1262781
+        elif no_pesawat == 5:
+            harga = 1307216
+        elif no_pesawat == 6:
+            harga = 1317344
+        elif no_pesawat <= 8:
+            harga = 522448
+        elif no_pesawat <= 10:
+            harga = 2063300
         else:
             print("Flights are not available")
     
