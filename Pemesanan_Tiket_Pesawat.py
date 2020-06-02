@@ -387,7 +387,7 @@ while ulang == True:
             print("Flights are not available")
               
     elif dari == "Yogyakarta" and ke == "Jakarta":
-        yia_cgk()
+        Yogyakarta_Jakarta()
         no_pesawat = int(input("Flight Number : "))
         if no_pesawat == 1:
             harga = 1293100
@@ -407,7 +407,7 @@ while ulang == True:
             print("Flights are not available")
         
     elif dari == "Yogyakarta" and ke == "Makassar":
-        yia_upg()
+        Yogyakarta_Makassar()
         no_pesawat = int(input("Flight Number : "))
         if no_pesawat <= 2:
             harga = 500500
@@ -425,7 +425,7 @@ while ulang == True:
             print("Flights are not available")
     
     elif dari == "Yogyakarta" and ke == "Surabaya":
-        yia_sub()
+        Yogyakarta_Surabaya()
         no_pesawat = int(input("Flight Number : "))
         if no_pesawat <= 3:
             harga = 718900
@@ -441,7 +441,7 @@ while ulang == True:
             print("Flights are not available")
             
     elif dari == "Yogyakarta" and ke == "Denpasar":
-        yia_dps()
+        Yogyakarta_Denpasar()
         no_pesawat = int(input("Flight Number : "))
         if no_pesawat <= 2:
             harga = 992200
