@@ -22,4 +22,4 @@ pada repository kali ini kami mengeksekusi sebuah program "Pemesanan Tiket Pesaw
 
 * setelah menginputkan kota departure dan arrival calon penumpang akan ditampilkan maskapai maskapai yang tersedia dengan rute perjalanan yang suduah di inputkan, setelah itu calon penumpang akan diberikan pilihan untuk memakai asuransi perjalan atau tidak.
 
-* ssetelah melakukan pemesanan tiket pesawat calon penumpang diharuskan menginput beberapa data diri untuk kepentingan perjalanan.
+* setelah melakukan pemesanan tiket pesawat calon penumpang diharuskan menginput beberapa data diri untuk kepentingan perjalanan.
