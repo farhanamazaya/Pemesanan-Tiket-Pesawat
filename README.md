@@ -8,18 +8,11 @@ Program ini bertujuan untuk memenuhi tugas ujian akhir mata kuliah program compu
   
 Program yang menggunakan Bahasa Python ini dibuat berdasarkan materi-materi yang telah kami terima di semester II dan sumber-sumber dari internet. Program ini dibuat untuk memberikan kemudahan bagi calon penumpang untuk memesan tiket penerbangan ke beberapa kota.
 
-# Deskrispsi Program
-pada repository kali ini kami mengeksekusi sebuah program "Pemesanan Tiket Pesawat". program ini bertujuan untuk mempermudah calon penumpang untuk melakukan pemesan tiket pesawat dari beberapa kota ke beberapa kota lainnya.
-
 
 # Penggunaan
-* calon penumpang dapat melakukan pemesanan tiket pesawat dengan menggunankan applikasi ini. pada halaman awal aplikasi akan ditampilkan kota koat departure dan arrival yaitu :
-1. Jakarta
-2. Yogyakarta
-3. Surabaya
-4. Denpasar
-5. Makassar
+1. Pengguna dapat menjalankan program dengan menginstall python (www.python.org)
+2. Program dapat dijalankan dengan shell terminal atau Integrated Development Environment https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
 
-* setelah menginputkan kota departure dan arrival calon penumpang akan ditampilkan maskapai maskapai yang tersedia dengan rute perjalanan yang suduah di inputkan, setelah itu calon penumpang akan diberikan pilihan untuk memakai asuransi perjalan atau tidak.
-
-* setelah melakukan pemesanan tiket pesawat calon penumpang diharuskan menginput beberapa data diri untuk kepentingan perjalanan.
+# Penting
+1. Program menggunakan bahasa python
+2. CSV dan program harus berada dalam satu folder yang sama
