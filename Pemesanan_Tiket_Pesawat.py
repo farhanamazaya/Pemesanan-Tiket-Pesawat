@@ -5,6 +5,8 @@ Created on Mon Jun  1 20:37:53 2020
 @author: HP
 """
 
+import csv
+
 def kota():
     print("Select a City")
     print("Departure \t Arrival")
@@ -15,7 +17,6 @@ def kota():
     print("▶ Denpasar \t ▶ Denpasar")
     
 def Yogyakarta_Jakarta():
-    import csv
     flights = []
     with open('Yogyakarta_Jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -27,7 +28,6 @@ def Yogyakarta_Jakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def Yogyakarta_Makassar():
-    import csv
     flights = []
     with open('Yogyakarta_Makassar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -39,7 +39,6 @@ def Yogyakarta_Makassar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
 def Yogyakarta_Surabaya():
-    import csv
     flights = []
     with open('Yogyakarta_Surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -51,7 +50,6 @@ def Yogyakarta_Surabaya():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
 
 def Yogyakarta_Denpasar():
-    import csv
     flights = []
     with open('Yogyakarta_Denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -63,7 +61,6 @@ def Yogyakarta_Denpasar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def denpasar_jakarta():
-    import csv
     flights = []
     with open('denpasar_jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -75,7 +72,6 @@ def denpasar_jakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def denpasar_makassar():
-    import csv
     flights = []
     with open('denpasar_makassar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -87,7 +83,6 @@ def denpasar_makassar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def denpasar_surabaya():
-    import csv
     flights = []
     with open('denpasar_surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -99,7 +94,6 @@ def denpasar_surabaya():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")        
 
 def denpasar_yogyakarta():
-    import csv
     flights = []
     with open('denpasar_yogyakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -111,7 +105,6 @@ def denpasar_yogyakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def makassar_jakarta():
-    import csv
     flights = []
     with open('makassar_jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -123,7 +116,6 @@ def makassar_jakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def makassar_surabaya():
-    import csv
     flights = []
     with open('makassar_surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -135,7 +127,6 @@ def makassar_surabaya():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def makassar_yogyakarta():
-    import csv
     flights = []
     with open('makassar_yogyakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -147,7 +138,6 @@ def makassar_yogyakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def makassar_denpasar():
-    import csv
     flights = []
     with open('makassar_denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -159,7 +149,6 @@ def makassar_denpasar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
               
 def jakarta_surabaya():
-    import csv
     flights = []
     with open('jakarta_surabaya.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -171,7 +160,6 @@ def jakarta_surabaya():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
         
 def jakarta_makassar():
-    import csv
     flights = []
     with open('jakarta_makassar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -183,7 +171,6 @@ def jakarta_makassar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
 
 def jakarta_denpasar():
-    import csv
     flights = []
     with open('jakarta_denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -195,7 +182,6 @@ def jakarta_denpasar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
         
 def jakarta_yogyakarta():
-    import csv
     flights = []
     with open('jakarta_yogyakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -207,7 +193,6 @@ def jakarta_yogyakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
               
 def Surabaya_Jakarta():
-    import csv
     flights = []
     with open('Surabaya_Jakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -219,7 +204,6 @@ def Surabaya_Jakarta():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def Surabaya_Denpasar():
-    import csv
     flights = []
     with open('Surabaya_Denpasar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -231,7 +215,6 @@ def Surabaya_Denpasar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def Surabaya_Makassar():
-    import csv
     flights = []
     with open('Surabaya_Makassar.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -243,7 +226,6 @@ def Surabaya_Makassar():
         print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
         
 def Surabaya_Yogyakarta():
-    import csv
     flights = []
     with open('Surabaya_Yogyakarta.csv') as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -508,7 +490,6 @@ while ulang == True:
               
     elif dari == "Yogyakarta" and ke == "Jakarta":
         Yogyakarta_Jakarta()
-        import csv
         f = open('Yogyakarta_Jakarta.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -525,7 +506,6 @@ while ulang == True:
         
     elif dari == "Yogyakarta" and ke == "Makassar":
         Yogyakarta_Makassar()
-        import csv
         f = open('Yogyakarta_Makassar.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -542,7 +522,6 @@ while ulang == True:
     
     elif dari == "Yogyakarta" and ke == "Surabaya":
         Yogyakarta_Surabaya()
-        import csv
         f = open('Yogyakarta_Surabaya.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -559,7 +538,6 @@ while ulang == True:
             
     elif dari == "Yogyakarta" and ke == "Denpasar":
         Yogyakarta_Denpasar()
-        import csv
         f = open('Yogyakarta_Denpasar.csv', 'r')
         reader = csv.reader(f)
         flights = {}
