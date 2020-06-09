@@ -13,7 +13,7 @@ Program yang menggunakan Bahasa Python ini dibuat berdasarkan materi-materi yang
 1. Pengguna dapat menjalankan program dengan menginstall python (www.python.org)
 2. Program dapat dijalankan dengan shell terminal atau Integrated Development Environment https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
 3. Jika dijalankan dengan shell terminal
-  - Pengguna Linux dan MacOS
+  - Pengguna Linux dan Mac OS
 	1. Buka terminal CTRL+ALT+T
   2. Masuk ke direktori dimana file Python Anda disimpan (contoh: cd /Users/admin/Desktop/).
   3. Jalankan script Python dengan menggunakan Python diikuti dengan nama file (contoh: Pemesanan_Tiket_Pesawat.py)
