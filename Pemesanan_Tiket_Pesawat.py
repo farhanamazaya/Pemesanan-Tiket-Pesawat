@@ -258,14 +258,17 @@ def pesan():
        
 def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
-    input("◾ Full Name : ")
+    global pemesan
+    pemesan =[]
+    nama = input("◾ Full Name : ")
     try:
-        float(input("◾ Mobile Number : "))
+       nomor = int(input("◾ Mobile Number : +62"))
     except ValueError:
         print("\nError: You have to input your phone number")
-    input("◾ Email : ")
-    print("""We will send your booking confirmations to the above contact details, 
-which will also be used for refund or reschedule purposes.""")
+    email = input("◾ Email : ")
+    pemesan.append(nama)
+    pemesan.append(nomor)
+    pemesan.append(email)
               
 def penumpang():
     print ("Passengers Data")
