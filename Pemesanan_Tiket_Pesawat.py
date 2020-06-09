@@ -258,17 +258,14 @@ def pesan():
        
 def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
-    global pemesan
-    pemesan =[]
-    nama = input("◾ Full Name : ")
+    input("◾ Full Name : ")
     try:
-       nomor = int(input("◾ Mobile Number : +62"))
+        float(input("◾ Mobile Number : "))
     except ValueError:
         print("\nError: You have to input your phone number")
-    email = input("◾ Email : ")
-    pemesan.append(nama)
-    pemesan.append(nomor)
-    pemesan.append(email)
+    input("◾ Email : ")
+    print("""We will send your booking confirmations to the above contact details, 
+which will also be used for refund or reschedule purposes.""")
               
 def penumpang():
     print ("Passengers Data")
@@ -297,6 +294,29 @@ def penumpang():
         print(f"Data penumpang ke-{cIn} :")
         print("NAME :", dt['Name'])
         print("TITTLE :", dt['Tittle'])
+              
+def flight_detail():
+    print("============  FLIGHT DETAILS  ============")
+    print("Please make sure that all information \nwritten below are correct")
+    print("")
+    print(flights[pilih]['airlines'])
+    print("🛫", dari, "\t", keberangkatan)
+    print(" | ", flights[pilih]['time'][0:5])
+    print(" | ")
+    print(" | ")
+    print("🛬", ke)
+    print("   ", flights[pilih]['time'][8:13])
+    print("")
+    print("CONTACT DETAILS")
+    print("◾ Full Name     : ", pemesan[0])
+    print("◾ Mobile Number :  +62", pemesan[1])
+    print("◾ Email         : ", pemesan[2])
+    print("\nPASSENGER DETAILS")
+    dataTraveller()
+    print("\nPRICE DETAILS")
+    totalHarga()
+    print("")
+    print("We will send your booking confirmations to the above contact details,\nwhich will also be used for refund or reschedule purposes.")
               
 ulang = True
 inputuser = ""
