@@ -554,75 +554,67 @@ while ulang == True:
     
     elif dari == "Denpasar" and ke == "Jakarta":
         denpasar_jakarta()
-        no_pesawat = int(input("Flight Number : "))
-        if no_pesawat == 1:
-            harga = 486700
-        elif no_pesawat == 2:
-            harga = 1258900
-        elif no_pesawat == 3:
-            harga = 1268800
-        elif no_pesawat == 4:
-            harga = 1284200
-        elif no_pesawat <= 6:
-            harga = 1293000
-        elif no_pesawat == 7:
-            harga = 1308400
-        elif no_pesawat <= 10:
-            harga = 1679100
+        f = open('denpasar_jakarta.csv', 'r')
+        reader = csv.reader(f)
+        flights = {}
+        for row in reader:
+            flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
+        pilih = input("Flight Number : ")
+        if pilih in flights:
+            print("Airline : ", flights[pilih]['airlines'])
+            print("Time    : ", flights[pilih]['time'])
+            print("Price   : ", flights[pilih]['price'])
         else:
             print("Flights are not available")
+            continue
         
     elif dari == "Denpasar" and ke == "Makassar":
         denpasar_makassar()
-        no_pesawat = int(input("Flight Number : "))
-        if no_pesawat == 1:
-            harga = 754000
-        elif no_pesawat == 2:
-            harga = 982800
-        elif no_pesawat == 3:
-            harga = 1092800
-        elif no_pesawat <= 6:
-            harga = 1396400
-        elif no_pesawat == 7:
-            harga = 1654400
-        elif no_pesawat == 8:
-            harga = 2167000
-        elif no_pesawat <= 10:
-            harga = 3697100
+        f = open('denpasar_makassar.csv', 'r')
+        reader = csv.reader(f)
+        flights = {}
+        for row in reader:
+            flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
+        pilih = input("Flight Number : ")
+        if pilih in flights:
+            print("Airline : ", flights[pilih]['airlines'])
+            print("Time    : ", flights[pilih]['time'])
+            print("Price   : ", flights[pilih]['price'])
         else:
             print("Flights are not available")
+            continue
     
     elif dari == "Denpasar" and ke == "Surabaya":
         denpasar_surabaya()
-        no_pesawat = int(input("Flight Number : "))
-        if no_pesawat == 1:
-            harga = 592300
-        elif no_pesawat == 2:
-            harga = 611000
-        elif no_pesawat == 3:
-            harga = 617600
-        elif no_pesawat == 4:
-            harga = 641800
-        elif no_pesawat <= 10:
-            harga = 2967800
+        f = open('denpasar_surabaya.csv', 'r')
+        reader = csv.reader(f)
+        flights = {}
+        for row in reader:
+            flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
+        pilih = input("Flight Number : ")
+        if pilih in flights:
+            print("Airline : ", flights[pilih]['airlines'])
+            print("Time    : ", flights[pilih]['time'])
+            print("Price   : ", flights[pilih]['price'])
         else:
             print("Flights are not available")
+            continue
     
     elif dari == "Denpasar" and ke == "Yogyakarta":
         denpasar_yogyakarta()
-        no_pesawat = int(input("Flight Number : "))
-        if no_pesawat == 1:
-            harga = 834400
-        elif no_pesawat <= 5:
-            harga = 1042200
-        elif no_pesawat == 6:
-            harga = 1093900
-        elif no_pesawat == 7:
-            harga = 1329300
-        elif no_pesawat <= 10:
-            harga = 2616900
+        f = open('denpasar_yogyakarta.csv', 'r')
+        reader = csv.reader(f)
+        flights = {}
+        for row in reader:
+            flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
+        pilih = input("Flight Number : ")
+        if pilih in flights:
+            print("Airline : ", flights[pilih]['airlines'])
+            print("Time    : ", flights[pilih]['time'])
+            print("Price   : ", flights[pilih]['price'])
         else:
-            print("Flights are not available")          
+            print("Flights are not available")
+            continue
               
     print("")
     pesan()
