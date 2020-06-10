@@ -680,6 +680,7 @@ while ulang == True:
     print("")
     print("Wait a minute. Your data is being processed")
     time.sleep(5)
+    os.system("cls")
     flight_detail()
     
     inputuser = input("Back to Menu? (yes/no) : ")
