@@ -243,18 +243,25 @@ def pesan():
     juml_tiket = penumpang_data
     print("")
     
+    global asuransi
     if asuransi_perjalanan == "yes":
         asuransi = 37000
     elif asuransi_perjalanan == "no":
         asuransi = 0
     else:
         print ("Please try again")
-        
-    total_harga = juml_tiket * (harga + asuransi)
-    print("Price You Pay Rp", total_harga)
-    print("Price Details")
-    print("◾ Total Original Price Rp ", math.ceil (juml_tiket * harga))
-    print("◾ Insurance Rp ", math .ceil (juml_tiket * asuransi))
+    
+    global total_harga
+    total_harga = juml_tiket * (int(flights[pilih]['price']) + asuransi)
+    global original
+    original = math.ceil (juml_tiket * int(flights[pilih]['price']))
+    global insurance
+    insurance = math.ceil (juml_tiket * asuransi)
+ 
+def totalHarga(): 
+    print("Price You Pay           : Rp", total_harga)
+    print("◾ Total Original Price : Rp ", original)
+    print("◾ Insurance            : Rp ", insurance)
        
 def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
