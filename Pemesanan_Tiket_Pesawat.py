@@ -480,7 +480,7 @@ while ulang == True:
             continue
               
     elif dari == "Surabaya" and ke == "Jakarta":
-        jakarta_surabaya()
+        Surabaya_Jakarta()
         f = open('Surabaya_Jakarta.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -496,7 +496,7 @@ while ulang == True:
             continue
             
     elif dari == "Surabaya" and ke == "Makassar":
-        jakarta_makassar()
+        Surabaya_Makassar()
         f = open('Surabaya_Makassar.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -512,7 +512,7 @@ while ulang == True:
             continue
     
     elif dari == "Surabaya" and ke == "Denpasar":
-        jakarta_denpasar()
+        Surabaya_Denpasar()
         f = open('Surabaya_Denpasar.csv', 'r')
         reader = csv.reader(f)
         flights = {}
@@ -528,7 +528,7 @@ while ulang == True:
             continue
             
     elif dari == "Surabaya" and ke == "Yogyakarta":
-        jakarta_yogyakarta()
+        Surabaya_Yogyakarta()
         f = open('Surabaya_Yogyakarta.csv', 'r')
         reader = csv.reader(f)
         flights = {}
