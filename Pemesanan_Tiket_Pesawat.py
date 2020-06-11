@@ -15,6 +15,7 @@ def kota():
     print("▶ Surabaya \t ▶ Surabaya")
     print("▶ Yogyakarta \t ▶ Yogyakarta")
     print("▶ Denpasar \t ▶ Denpasar")
+    print("")
     
 def Yogyakarta_Jakarta():
     flights = []
@@ -272,6 +273,7 @@ def data_pemesan():
         nomor = int(input("◾ Mobile Number : +62 "))
     except ValueError:
         print("\nError: You have to input your phone number")
+        nomor = int(input("◾ Mobile Number : +62 "))
     email = input("◾ Email : ")
     pemesan.append(nama)
     pemesan.append(nomor)
@@ -335,10 +337,10 @@ while ulang == True:
     print("")
     
     kota()
-    dari = input("Departure : ")
-    ke = input("Arrival : ")
-    keberangkatan = str(input("Depatures Date (dd/mm/yyyy): "))
-    penumpang_data = int(input("Passengers : "))
+    dari            = input("Departure                   : ")
+    ke              = input("Arrival                     : ")
+    keberangkatan   = str(input("Depatures Date (dd/mm/yyyy) : "))
+    penumpang_data  = int(input("Passengers                  : "))
     os.system("cls")
     
     print("Looking for all available flights ...")
