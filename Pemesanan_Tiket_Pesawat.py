@@ -199,10 +199,10 @@ def Surabaya_Jakarta():
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
-    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
     print("-" * 70)
     for data in flights:
-        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
         
 def Surabaya_Denpasar():
     flights = []
@@ -210,10 +210,10 @@ def Surabaya_Denpasar():
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
-    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
     print("-" * 70)
     for data in flights:
-        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
         
 def Surabaya_Makassar():
     flights = []
@@ -221,10 +221,10 @@ def Surabaya_Makassar():
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
-    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
     print("-" * 70)
     for data in flights:
-        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
         
 def Surabaya_Yogyakarta():
     flights = []
@@ -232,10 +232,10 @@ def Surabaya_Yogyakarta():
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             flights.append(row)
-    print("NO \t AIRLINES \t TIME \t\t\t PRICE")
+    print("NO \t AIRLINES \t TIME \t\t PRICE")
     print("-" * 70)
     for data in flights:
-        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t\t {data['PRICE']}")
+        print(f"{data['NO']} \t {data['AIRLINES']} \t {data['TIME']} \t {data['PRICE']}")
 
 def pesan():
     import math
@@ -268,21 +268,21 @@ def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
     global pemesan
     pemesan =[]   
-    nama = input("◾ Full Name : ")
+    nama = input("◾ Full Name     : ")
     try:
         nomor = int(input("◾ Mobile Number : +62 "))
     except ValueError:
         print("\nError: You have to input your phone number")
         nomor = int(input("◾ Mobile Number : +62 "))
-    email = input("◾ Email : ")
+    email = input("◾ Email         : ")
     pemesan.append(nama)
     pemesan.append(nomor)
     pemesan.append(email)
               
 def penumpang():
     print("Passenger Details")
-    global penumpang
-    penumpang =[]
+    global datapenumpang
+    datapenumpang =[]
     i = 1
     while i <= penumpang_data:
         dtpenumpang = {}
@@ -291,13 +291,13 @@ def penumpang():
         name  = input("◾ Name              : ")
         dtpenumpang['Name'] = name
         dtpenumpang['Title'] = title
-        penumpang.append(dtpenumpang)
+        datapenumpang.append(dtpenumpang)
         i += 1
             
 def dataTraveller():
     cIn = 0
     while cIn < penumpang_data:
-        dt = penumpang[cIn]
+        dt = datapenumpang[cIn]
         cIn += 1
         print(f"◾ Passenger {cIn} : ", dt['Title'], dt['Name'])
             
