@@ -289,7 +289,6 @@ def data_pemesan():
     while nama == "":
         print("\nPlease input your full name")
         nama= input ("◾ Full Name : ")
-        nomor = int(input("◾ Mobile Number : +62"))
         
     nomorTelp()
     
