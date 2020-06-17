@@ -271,28 +271,33 @@ def totalHarga():
     print("Price You Pay           : Rp", total_harga)
     print("◾ Total Original Price : Rp ", original)
     print("◾ Insurance            : Rp ", insurance)
+            
+def nomorTelp():
+    global nomor
+    try:
+        nomor = int(input("◾ Mobile Number : +62 "))
+    except ValueError:
+        print ("\nPlease input your phone number:")
+        nomorTelp()
        
 def data_pemesan():
     print("Contact Details (for E-ticket/Voucher)")
     global pemesan
-    pemesan =[]   
-              
-    nama = input("◾ Full Name     : ")
+    pemesan =[]
+    
+    nama = input("◾ Full Name : ")
     while nama == "":
-         print("\nPlease input your full name")
-         nama = input("◾ Full Name     : ")
-              
-    try:
-        nomor = int(input("◾ Mobile Number : +62 "))
-    except ValueError:
-        print("\nError: You have to input your phone number")
-        nomor = int(input("◾ Mobile Number : +62 "))
-              
-    email = input("◾ Email         : ")
+        print("\nPlease input your full name")
+        nama= input ("◾ Full Name : ")
+        nomor = int(input("◾ Mobile Number : +62"))
+        
+    nomorTelp()
+    
+    email = input("◾ Email : ")
     while email == "":
-         print("\nPlease input your email addres")
-         email = input("◾ Email         : ")
-              
+        print ("Please input your email address")
+        email = input ("◾ Email : ")
+        
     pemesan.append(nama)
     pemesan.append(nomor)
     pemesan.append(email)
