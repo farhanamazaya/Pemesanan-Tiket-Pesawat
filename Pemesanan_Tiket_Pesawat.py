@@ -17,6 +17,14 @@ def kota():
     print("▶ Denpasar \t ▶ Denpasar")
     print("")
     
+def jumlahpenumpang():
+    global penumpang_data
+    try:
+        penumpang_data = int(input("Passangers))
+    except ValueError:
+        print("\nPlease input the number of passangers")
+        jumlahpenumpang()
+    
 def Yogyakarta_Jakarta():
     flights = []
     with open('Yogyakarta_Jakarta.csv') as csv_file:
@@ -347,7 +355,12 @@ while ulang == True:
     print("")
     
     kota()
-    dari            = input("Departure                   : ")
+              
+    dari = input("Departure                   : ")
+    while dari == "":
+        print("Please input departure city")
+        dari = input("Departure                   : ")
+              
     ke              = input("Arrival                     : ")
     keberangkatan   = str(input("Depatures Date (dd/mm/yyyy) : "))
     penumpang_data  = int(input("Passengers                  : "))
