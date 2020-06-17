@@ -374,7 +374,7 @@ while ulang == True:
         print("Please input departure city")
         dari = input("Departure                   : ")
               
-    ke  = input("Arrival                     : ")
+    ke = input("Arrival                     : ")
     while ke == "":
         print("Please input arrival city")
         dari = input("Arrival                       : ")
