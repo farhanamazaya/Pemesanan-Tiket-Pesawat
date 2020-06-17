@@ -305,8 +305,17 @@ def penumpang():
     while i <= penumpang_data:
         dtpenumpang = {}
         print("Passenger ", i)
+              
         title = input("◾ Title (Mr/Mrs/Ms) : ")
+        while title not in ['Mr', 'Mrs', 'Ms']:
+            print("Please select the title of passenger")
+            title = input("◾ Title (Mr/Mrs/Ms) : ")
+              
         name  = input("◾ Name              : ")
+        while name == "":
+            print("Please enter the name of passenger")
+            name  = input("◾ Name              : ")              
+              
         dtpenumpang['Name'] = name
         dtpenumpang['Title'] = title
         datapenumpang.append(dtpenumpang)
