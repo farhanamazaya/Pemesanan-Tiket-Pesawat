@@ -374,7 +374,11 @@ while ulang == True:
         print("Please input departure city")
         dari = input("Departure                   : ")
               
-    ke              = input("Arrival                     : ")
+    ke  = input("Arrival                     : ")
+    while ke == "":
+        print("Please input arrival city")
+        dari = input("Arrival                       : ")
+              
     keberangkatan   = str(input("Depatures Date (dd/mm/yyyy) : "))
     penumpang_data  = int(input("Passengers                  : "))
     os.system("cls")
