@@ -379,8 +379,14 @@ while ulang == True:
         print("Please input arrival city")
         dari = input("Arrival                       : ")
               
+              
     keberangkatan   = str(input("Depatures Date (dd/mm/yyyy) : "))
-    penumpang_data  = int(input("Passengers                  : "))
+    while keberangkatan == "":
+        print("Please input departure date")
+        keberangkatan  = str(input("Depatures Date (dd/mm/yyyy) : "))
+              
+    jumlahpenumpang()
+              
     os.system("cls")
     
     print("Looking for all available flights ...")
