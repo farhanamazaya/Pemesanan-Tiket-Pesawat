@@ -16,13 +16,46 @@ def kota():
     print("▶ Yogyakarta \t ▶ Yogyakarta")
     print("▶ Denpasar \t ▶ Denpasar")
     print("")
+
+def date():
+    print("Departure Date")
+    
+    global tanggal
+    try:
+        tanggal = int(input("Date (1-31)    : "))
+        while tanggal not in range (1,32):
+            print ("\nPlease input date")
+            tanggal = int(input("Date (1-31)    : "))
+    except ValueError:
+        print("Please input date")
+        tanggal = int(input("Date (1-31)    : "))
+    
+    global bulan    
+    try:
+        bulan = int(input ("Month (1-12)   : "))
+        while bulan not in range (1,13):
+            print ("\nPlease input month")
+            bulan = int(input ("Month (1-12)   :"))
+    except ValueError:
+        print("Please input month")
+        bulan = int(input ("Month (1-12)   :"))    
+    
+    global tahun
+    try:
+        tahun = int(input ("Year           :"))
+        while tahun < 2020:
+            print ("Please input the current year")
+            tahun = int(input ("Year           :"))
+    except ValueError:
+        print ("Please input the current year")
+        tahun = int(input ("Year           :"))    
     
 def jumlahpenumpang():
     global penumpang_data
     try:
-        penumpang_data = int(input("Passangers))
+        penumpang_data = int(input("Passengers     : "))
     except ValueError:
-        print("\nPlease input the number of passangers")
+        print("\nPlease input the number of passengers")
         jumlahpenumpang()
     
 def Yogyakarta_Jakarta():
@@ -338,7 +371,7 @@ def flight_detail():
     print("Please make sure that all information \nwritten below are correct")
     print("")
     print(flights[pilih]['airlines'])
-    print("🛫", dari, "\t", keberangkatan)
+    print("🛫", dari, "\t {}/{}/{}". format(tanggal, bulan, tahun))
     print(" | ", flights[pilih]['time'][0:5])
     print(" | ")
     print(" | ")
@@ -369,21 +402,17 @@ while ulang == True:
     
     kota()
               
-    dari = input("Departure                   : ")
+    dari = input("Departure      : ")
     while dari == "":
         print("Please input departure city")
-        dari = input("Departure                   : ")
+        dari = input("Departure      :")
               
-    ke = input("Arrival                     : ")
+    ke = input("Arrival        : ")
     while ke == "":
         print("Please input arrival city")
-        dari = input("Arrival                       : ")
+        dari = input("Arrival        : ")       
               
-              
-    keberangkatan   = str(input("Depatures Date (dd/mm/yyyy) : "))
-    while keberangkatan == "":
-        print("Please input departure date")
-        keberangkatan  = str(input("Depatures Date (dd/mm/yyyy) : "))
+    date()
               
     jumlahpenumpang()
               
@@ -408,7 +437,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -424,7 +453,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -440,7 +469,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -456,7 +485,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -472,7 +501,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -488,7 +517,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -504,7 +533,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -520,7 +549,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -536,7 +565,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -552,7 +581,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -568,7 +597,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -584,7 +613,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -600,7 +629,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -616,7 +645,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -632,7 +661,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -648,7 +677,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -664,7 +693,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -680,7 +709,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -696,7 +725,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
@@ -712,7 +741,7 @@ while ulang == True:
         flights = {}
         for row in reader:
             flights[row[0]] = {'airlines':row[1],'time':row[2],'price':row[3]}
-        pilih = input("Flight Number : ")
+        pilih = input("\nFlight Number : ")
         if pilih in flights:
             print("Airline : ", flights[pilih]['airlines'])
             print("Time    : ", flights[pilih]['time'])
