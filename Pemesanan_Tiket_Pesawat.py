@@ -35,20 +35,20 @@ def date():
         bulan = int(input ("Month (1-12)   : "))
         while bulan not in range (1,13):
             print ("\nPlease input month")
-            bulan = int(input ("Month (1-12)   :"))
+            bulan = int(input ("Month (1-12)   : "))
     except ValueError:
         print("Please input month")
-        bulan = int(input ("Month (1-12)   :"))    
+        bulan = int(input ("Month (1-12)   : "))    
     
     global tahun
     try:
-        tahun = int(input ("Year           :"))
+        tahun = int(input ("Year           : "))
         while tahun < 2020:
             print ("Please input the current year")
-            tahun = int(input ("Year           :"))
+            tahun = int(input ("Year           : "))
     except ValueError:
         print ("Please input the current year")
-        tahun = int(input ("Year           :"))    
+        tahun = int(input ("Year           : "))    
     
 def jumlahpenumpang():
     global penumpang_data
@@ -310,7 +310,7 @@ def nomorTelp():
     try:
         nomor = int(input("◾ Mobile Number : +62 "))
     except ValueError:
-        print ("\nPlease input your phone number:")
+        print ("\nPlease input your phone number : ")
         nomorTelp()
        
 def data_pemesan():
@@ -318,17 +318,17 @@ def data_pemesan():
     global pemesan
     pemesan =[]
     
-    nama = input("◾ Full Name : ")
+    nama = input("◾ Full Name     : ")
     while nama == "":
         print("\nPlease input your full name")
-        nama = input ("◾ Full Name : ")
+        nama = input ("◾ Full Name     : ")
         
     nomorTelp()
     
-    email = input("◾ Email : ")
+    email = input("◾ Email         : ")
     while email == "":
         print ("Please input your email address")
-        email = input ("◾ Email : ")
+        email = input ("◾ Email         : ")
         
     pemesan.append(nama)
     pemesan.append(nomor)
